@@ -171,6 +171,7 @@ body {
 
 .title .main-title .main-title1 {
   display: inline-block;
+  font-style: italic;
   font-family: "Noto Serif JP", serif;
   color: white;
   font-size: 55px;
@@ -235,31 +236,36 @@ body {
   font-style: italic;
 }
 
-.movie > button {
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.scroll {
   position: absolute;
-  display: inline-block;
-  letter-spacing: 2px;
-  font-size: 1.25em;
-  font-weight: bold;
-  -webkit-animation-name: animate-btn;
-          animation-name: animate-btn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
-          animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  top: 80%;
+  left: 50%;
+  overflow: hidden;
+}
+
+.scroll__downarrow {
+  -webkit-animation-name: kf-arrow-anime;
+          animation-name: kf-arrow-anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
           animation-direction: normal;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.scroll__scrolltext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2em;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .information {
@@ -318,6 +324,8 @@ body {
 .information .intro__img .img-zoom {
   height: 300px;
   width: 450px;
+  -webkit-box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .information .intro__img__btn {
@@ -352,6 +360,8 @@ body {
   height: 150px;
   overflow: hidden;
   margin-bottom: 5px;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .information .activity__img > a > img {
@@ -475,6 +485,32 @@ footer .footer__copyright {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  30% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  30% {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
