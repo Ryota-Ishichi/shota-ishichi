@@ -111,6 +111,7 @@ body {
     pointer-events: none;
     .main-title1 {
       display: inline-block;
+      font-style: italic;
       font-family: "Noto Serif JP", serif;
       color: white;
       font-size: 55px;
@@ -168,25 +169,26 @@ body {
   }
 }
 
-.movie {
-  & > button {
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: inline-block;
-    letter-spacing: 2px;
-    font-size: 1.25em;
-    font-weight: bold;
+.scroll {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  overflow: hidden;
 
+  &__downarrow {
     @include animation(
-      $name: animate-btn,
-      $duration: 1s,
-      $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
-      $fill-mode: both,
-      $delay: 2.5s
+      $name: kf-arrow-anime,
+      $iteration-count: infinite,
+      $duration: 2s,
+      $timing-function: linear
     );
+  }
+
+  &__scrolltext {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2em;
+    position: relative;
+    transform: rotate(90deg);
   }
 }
 
@@ -238,6 +240,7 @@ body {
       .img-zoom {
         height: 300px;
         width: 450px;
+        box-shadow: 10px 20px 20px rgba(0, 0, 0, .5);
       }
 
       &__btn {
@@ -286,6 +289,7 @@ body {
       height: 150px;
       overflow: hidden;
       margin-bottom: 5px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
 
       & > a {
         & > img {
@@ -393,5 +397,16 @@ footer {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes kf-arrow-anime {
+  0%,
+  50%,
+  100% {
+    transform: translateY(-10%);
+  }
+  30% {
+    transform: none;
   }
 }
