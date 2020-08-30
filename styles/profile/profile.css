@@ -115,6 +115,8 @@ body {
   padding: 30px;
   background-color: #eaebe6;
   margin: 0 auto;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .intro__sub {
@@ -149,6 +151,8 @@ body {
 .intro__img .img-zoom {
   height: 300px;
   width: 450px;
+  -webkit-box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -178,6 +182,12 @@ footer .footer_nav .sub-nav li {
 footer .footer_nav .sub-nav li a {
   color: black;
   font-weight: bold;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer .footer_nav .sub-nav li a:hover {
+  color: rgba(70, 111, 247, 0.87);
 }
 
 footer .footer__copyright {
