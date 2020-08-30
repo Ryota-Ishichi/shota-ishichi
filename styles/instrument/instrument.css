@@ -126,6 +126,8 @@ body {
 .container .main__inner__photo > img {
   width: 300px;
   height: 150px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .container .main__inner__photo > img:nth-child(1) {
@@ -171,6 +173,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 20px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -200,6 +204,12 @@ footer .footer_nav .sub-nav li {
 footer .footer_nav .sub-nav li a {
   color: black;
   font-weight: bold;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer .footer_nav .sub-nav li a:hover {
+  color: rgba(70, 111, 247, 0.87);
 }
 
 footer .footer__copyright {
