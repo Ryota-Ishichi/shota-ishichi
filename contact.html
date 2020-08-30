@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Candal&family=Kosugi&family=Magra&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&family=Montserrat&family=Open+Sans&family=Oswald&family=Playfair+Display&family=Raleway&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+    <link rel="stylesheet" href="styles/contact/contact.css" />
+  </head>
+  <body>
+    <header class="main_header">
+      <h1>contact</h1>
+      <!-- <h1>お問い合わせ</h1> -->
+    </header>
+    <!-- class, action, methodを変更しないでください -->
+    <form
+      class="formrun"
+      action="https://form.run/api/v1/r/slmbmd5b0iqwsegdj6syf0mo"
+      method="post"
+    >
+      <!-- ↓自由に要素を追加・編集することができます -->
+      <div class="container">
+        <div class="contact_info">
+          <div class="name item">
+            <label for="name">お名前</label>
+            <input id="name" name="お名前" type="text" />
+          </div>
+
+          <div class="mail item">
+            <label for="mail">メールアドレス [必須]</label>
+            <input
+              id="mail"
+              name="メールアドレス"
+              type="text"
+              data-formrun-type="email"
+              data-formrun-required
+            />
+            <div data-formrun-show-if-error="メールアドレス">
+              メールアドレスを正しく入力してください
+            </div>
+          </div>
+
+          <div class="text_info item">
+            <label for="text_info">お問い合わせ [必須]</label>
+            <textarea
+              id="text_info"
+              name="お問い合わせ"
+              data-formrun-required
+            ></textarea>
+            <div data-formrun-show-if-error="お問い合わせ">
+              お問い合わせ入力してください
+            </div>
+          </div>
+
+          <!-- ボット投稿をブロックするためのタグ -->
+          <div class="_formrun_gotcha">
+            <style media="screen">
+              ._formrun_gotcha {
+                position: absolute !important;
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+              }
+            </style>
+            <label for="_formrun_gotcha"
+              >If you are a human, ignore this field</label
+            >
+            <input
+              type="text"
+              name="_formrun_gotcha"
+              id="_formrun_gotcha"
+              tabindex="-1"
+            />
+          </div>
+
+          <button
+            type="submit"
+            data-formrun-error-text="未入力の項目があります"
+            data-formrun-submitting-text="送信中..."
+          >
+            送信
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <footer>
+      <nav class="footer_nav">
+        <ul class="sub-nav">
+          <li><a href="index.html">top</a></li>
+          <li><a href="schedule.html">schedule</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">instrument</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__copyright">
+        &copy; Ryota Ishichi
+      </div>
+    </footer>
+  </body>
+</html>

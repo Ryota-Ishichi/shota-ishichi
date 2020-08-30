@@ -1,0 +1,140 @@
+@import "../modules/variables";
+@import "../modules/mixin";
+@import "../modules/button";
+
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+.mb-sm {
+  margin-bottom: 16px;
+}
+.mb-lg {
+  margin-bottom: 80px;
+}
+.pb-sm {
+  padding-bottom: 16px;
+}
+.pb-lg {
+  padding-bottom: 80px;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  @extend .content-width;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 1px;
+  font-style: oblique;
+  font-size: 24px;
+  padding-bottom: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main_header {
+  // position: relative;
+  // left: 5%;
+  // top: 0;
+  width: 100%;
+  @extend .mb-sm;
+
+  & h1 {
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+}
+
+.intro__inner {
+  padding: 30px;
+  background-color: $cBgGray;
+  margin: 0 auto;
+}
+
+.intro__sub {
+  font-style: italic;
+}
+
+.intro__texts {
+  width: 400px;
+  margin: 0 auto;
+  // text-align: center;
+
+  &__inner {
+    .intro__btn {
+      & > btn {
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        display: inline-block;
+        font-family: "Nanum Pen Script", cursive;
+        letter-spacing: 2px;
+        font-size: 1.25em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.intro__img {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  @extend .mb-sm;
+  .img-zoom {
+    height: 300px;
+    width: 450px;
+  }
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: -3%;
+  width: 100%;
+  font-family: "Magra", sans-serif;
+
+  .footer_nav {
+    width: 100%;
+    .sub-nav {
+      text-align: center;
+      // display: flex;
+      font-size: 0.7em;
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-left: 34px;
+        a {
+          color: $cBlack;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .footer__copyright {
+    display: inline;
+    font-size: 10px;
+  }
+}
