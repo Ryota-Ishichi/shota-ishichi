@@ -277,6 +277,15 @@ body {
       @extend .flex;
       @extend .content-width;
       padding-bottom: 18px;
+      .activity__item {
+        .activity__img {
+          & > a {
+            & > img {
+              object-position: 50% 40%;
+            }
+          }
+        }
+      }
     }
 
     &__title {
@@ -297,30 +306,12 @@ body {
           height: 100%;
           width: 100%;
           cursor: pointer;
+          
         }
       }
     }
 
-    &__item {
-      &:nth-child(2) {
-        .activity__img {
-          & > a {
-            & > img {
-              object-position: 50% 40%;
-            }
-          }
-        }
-      }
-      &:nth-child(3) {
-        .activity__img {
-          & > a {
-            & > img {
-              object-position: 100% 55%;
-            }
-          }
-        }
-      }
-    }
+    
 
     //   &.inview {
     //     @include animation(
